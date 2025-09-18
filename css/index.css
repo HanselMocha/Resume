@@ -1,0 +1,60 @@
+:root{
+  --bg1: linear-gradient(135deg, #f0f4ff 0%, #f7fff2 100%);
+  --card-bg: rgba(255,255,255,0.9);
+  --accent: #0b63d8;
+  --muted: #555;
+  --maxw: 900px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg1);
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 16px;
+  line-height:1.45;
+}
+
+.resume-card{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card-bg);
+  border-radius:14px;
+  box-shadow: 0 10px 30px rgba(10,20,40,0.08);
+  padding:28px;
+  overflow:hidden;
+}
+
+.header{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  border-bottom:1px solid #e6eef9;
+  padding-bottom:18px;
+  margin-bottom:16px;
+}
+.id-photo{
+  width:120px;
+  height:140px;
+  object-fit:cover;
+  border-radius:8px;
+  border:4px solid #fff;
+  box-shadow:0 6px 18px rgba(10,20,40,0.06);
+}
+.personal h1{margin:0;font-size:28px;color:var(--accent)}
+.personal .role{margin:4px 0 8px;color:var(--muted);font-weight:600}
+.contact{font-size:13px;color:#444;margin:0}
+
+section{margin:12px 0}
+h2{margin:0 0 10px;font-size:16px;color:#0b4aa0}
+ul,ol{margin:0 0 0 18px;padding:0}
+.footer-note{margin-top:18px;padding-top:8px;border-top:1px dashed #e1e8f8;font-size:13px;color:#333}
+@media (max-width:600px){
+  .header{flex-direction:row}
+  .id-photo{width:90px;height:110px}
+  .personal h1{font-size:20px}
+}
